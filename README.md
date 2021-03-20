@@ -20,3 +20,5 @@ Re-using most of an old homework from GA to remind myself of the MERN stack and 
     ```
     yarn run seed
     ```
+
+4. Navigate to `localhost:8001`on your browser.
