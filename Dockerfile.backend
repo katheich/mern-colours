@@ -1,0 +1,11 @@
+FROM node:12.18.1
+
+WORKDIR /code
+
+COPY ["./backend/package.json", "./backend/yarn.lock", "./"]
+
+RUN yarn install
+
+COPY ./backend .
+
+CMD [ "node", "app.js" ]
