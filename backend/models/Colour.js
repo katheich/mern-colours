@@ -1,6 +1,13 @@
 const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
 
+const commentSchema = new mongoose.Schema({
+  text: { type: String, required: true },
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+}, {
+  timestamps: true
+})
+
 const rgbs = [
   { validator: length, message: 'needs to be 3 values long' },
   { validator: values, message: 'needs to between 0 and 255' }
@@ -28,7 +35,9 @@ const colourSchema = new mongoose.Schema({
     message: () => 'not a valid hex code'
   } },
   rgb: { type: [Number], required: true, validate: rgbs },
-  order: { type: Number }
+  order: { type: Number },
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  comments: [commentSchema]
 },{
   timestamps: true
 })
