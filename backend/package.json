@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "seed": "node db/seeds"
   },
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.12.1"
+    "mongoose": "^5.12.1",
+    "mongoose-unique-validator": "^2.0.3"
   }
 }
