@@ -17,7 +17,9 @@ services:
     build:
       context: ${PWD}
       dockerfile: Dockerfile.backend
-    command: node app.js
+    command: yarn run dev
+    volumes:
+      - ./backend:/code
     ports:
       - "8000:8000"
     depends_on:

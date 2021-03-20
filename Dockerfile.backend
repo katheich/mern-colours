@@ -4,8 +4,8 @@ WORKDIR /code
 
 COPY ["./backend/package.json", "./backend/yarn.lock", "./"]
 
-RUN yarn install
+RUN yarn global add nodemon && yarn install
 
 COPY ./backend .
 
-CMD [ "node", "app.js" ]
+CMD [ "yarn run dev" ]
