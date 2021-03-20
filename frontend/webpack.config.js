@@ -16,20 +16,20 @@ module.exports = {
       { test: /\.s(a|c)ss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] }
     ]
   },
-  // devServer: {
-  //   contentBase: path.resolve('src'),
-  //   hot: true,
-  //   open: true,
-  //   port: 8001,
-  //   watchContentBase: true,
-  //   historyApiFallback: true,
-  //   proxy: {
-  //     '/api': {
-  //       target: 'http://localhost:8000',
-  //       secure: false
-  //     }
-  //   }
-  // },
+  devServer: {
+    contentBase: path.resolve('src'),
+    hot: true,
+    open: true,
+    port: 8001,
+    watchContentBase: true,
+    historyApiFallback: true,
+    proxy: {
+      '/api': {
+        target: 'http://backend:8000',
+        secure: false
+      }
+    }
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
