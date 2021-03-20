@@ -1,6 +1,18 @@
 version: '3.4'
 
 services:
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: colours
+    volumes:
+    - ./mongodb/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    - ./mongodb/database:/data/db
+    ports:
+    - 27017:27017
+    restart: unless-stopped
   backend:
     build:
       context: ${PWD}
@@ -8,3 +20,5 @@ services:
     command: node app.js
     ports:
       - "8000:8000"
+    depends_on:
+      - mongo
