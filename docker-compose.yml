@@ -20,7 +20,20 @@ services:
     command: yarn run dev
     volumes:
       - ./backend:/code
+      - /code/node_modules
     ports:
       - "8000:8000"
     depends_on:
       - mongo
+  frontend:
+    build:
+      context: ${PWD}
+      dockerfile: Dockerfile.frontend
+    command: yarn run serve
+    volumes:
+      - ./frontend:/code
+      - /code/node_modules
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend

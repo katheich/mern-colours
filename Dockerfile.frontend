@@ -1,0 +1,11 @@
+FROM node:12.18.1
+
+WORKDIR /code
+
+COPY ["./frontend/package.json", "./frontend/yarn.lock", "./"]
+
+RUN yarn install
+
+COPY ./frontend .
+
+CMD [ "yarn run serve" ]
