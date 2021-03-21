@@ -1,6 +1,6 @@
 div.colour {
-  height: 30px;
-  width: 30px;
+  height: 3vw;
+  width: 3vw;
   border: solid white 2px;
   transition-timing-function: ease;
   transition: transform 0.2s;
@@ -11,8 +11,5 @@ div.colour:hover {
 }
 
 #spectrum {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  height: 100vh;
 }

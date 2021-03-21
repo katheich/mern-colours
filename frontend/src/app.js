@@ -8,6 +8,7 @@ import './styles/root.scss'
 import MenuBar from './components/Menu'
 import Home from './components/Home'
 import ColourIndex from './components/ColourIndex'
+import SingleColour from './components/SingleColour'
 
 const App = () => (
 
@@ -17,6 +18,7 @@ const App = () => (
     <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/colours' component={ColourIndex} />
+      <Route exact path='/colours/:id' component={SingleColour} />
     </Switch>
   </BrowserRouter>
 
