@@ -1,6 +1,8 @@
 import React from 'react'
-
 import getAxios from '../lib/getAxios'
+
+import '../styles/components/ColourIndex.scss'
+
 
 const ColourIndex = () => {
 

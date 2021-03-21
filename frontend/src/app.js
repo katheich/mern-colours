@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import './styles/style.scss'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import './styles/root.scss'
 
 import Home from './components/Home'
 import ColourIndex from './components/ColourIndex'
@@ -10,6 +11,7 @@ import ColourIndex from './components/ColourIndex'
 const App = () => (
 
   <BrowserRouter>
+    <CssBaseline />
     <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/colours' component={ColourIndex} />
