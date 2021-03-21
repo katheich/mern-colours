@@ -1,0 +1,18 @@
+#menu {
+  position: fixed;
+  right: 2vw;
+  top: 2vw;
+}
+
+#menu-button {
+  background-color:rgba(255, 255, 255,0.5);
+
+  &:hover {
+    background-color:rgba(255, 255, 255,0.8);
+  }
+
+  .icon {
+    margin-right: 2px;
+  }
+}
+
