@@ -10,7 +10,7 @@ import Home from './components/Home'
 import ColourIndex from './components/ColourIndex'
 import SingleColour from './components/SingleColour'
 import Account from './components/Account'
-
+import EditColour from './components/EditColour'
 
 const App = () => (
 
@@ -22,6 +22,7 @@ const App = () => (
       <Route exact path='/colours' component={ColourIndex} />
       <Route exact path='/colours/:id' component={SingleColour} />
       <Route exact path='/account' component={Account} />
+      <Route exact path='/colours/:id/edit' component={EditColour} />
     </Switch>
   </BrowserRouter>
 
