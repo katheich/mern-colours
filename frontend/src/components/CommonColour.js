@@ -78,7 +78,7 @@ const CommonColour = ({ colourID, disableInput }) => {
         <Grid container>
           <Grid item id="description">
             <h2>{data.name}</h2>
-            <p>Hex: {hexValue && hexValue}</p>
+            <p>#{hexValue && hexValue}</p>
 
             
             <small>Created by: {data.user && data.user.username}</small>
