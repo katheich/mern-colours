@@ -1,10 +1,10 @@
 # Docker practice with MERN
 
-Re-using most of an old homework from GA to remind myself of the MERN stack and practice a mini docker setup.
+Re-using most of an old homework from GA to remind myself of the MERN stack and practice a mini docker setup. Plus, playing with Material UI.
 
 ## To run locally
 
-1. Clone the repo
+1. Clone the repo, install docker and docker-compose.
 
 2. Build images and start the containers
     ```
