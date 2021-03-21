@@ -12,7 +12,7 @@ const Home = () => (
     alignItems="center"
   >
     <Grid item>
-      <h1 className="rainbow-text">Chroma</h1>
+      <h1 className="title rainbow-text">Chroma</h1>
     </Grid>
   </Grid>
 )
