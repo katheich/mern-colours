@@ -49,9 +49,9 @@ function MenuBar(props) {
         <MenuItem onClick={handleClose}>
           <Link to="/colours"><ListAltOutlinedIcon /></Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        {Auth.isAuthorized() && <MenuItem onClick={handleClose}>
           <Link to="/colours/new"><AddCircleOutlineOutlinedIcon /></Link>
-        </MenuItem>
+        </MenuItem>}
         {!Auth.isAuthorized() && <MenuItem onClick={handleClose}>
           <Link to="/account"><AccountCircleOutlinedIcon /></Link>
         </MenuItem>}
