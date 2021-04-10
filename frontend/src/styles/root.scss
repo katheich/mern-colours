@@ -8,3 +8,14 @@ a {
   50%{background-position:100% 25%}
   100%{background-position:0% 50%}
 }
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal-content {
+    padding: 20vh;
+    outline: 0;
+  }
+}

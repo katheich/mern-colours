@@ -52,8 +52,8 @@ function MenuBar(props) {
         {Auth.isAuthorized() && <MenuItem onClick={handleClose}>
           <Link to="/colours/new"><AddCircleOutlineOutlinedIcon /></Link>
         </MenuItem>}
-        {!Auth.isAuthorized() && <MenuItem onClick={handleClose}>
-          <Link to="/account"><AccountCircleOutlinedIcon /></Link>
+        {!Auth.isAuthorized() && <MenuItem onClick={props.handleAccountOpen}>
+          <AccountCircleOutlinedIcon />
         </MenuItem>}
         {Auth.isAuthorized() && <div className="navbar-item">
           <a onClick={() => handleLogout()}><ExitToAppOutlinedIcon /></a>
