@@ -1,0 +1,15 @@
+.colour {
+  height: 3vw;
+  width: 3vw;
+  border: solid white 2px;
+  transition-timing-function: ease;
+  transition: transform 0.2s;
+}
+
+.colour:hover {
+  transform: scale(1.3);
+}
+
+#spectrum {
+  height: 100vh;
+}
