@@ -27,3 +27,8 @@ Re-using most of an old homework from GA to remind myself of the MERN stack and 
     ```
 
 4. Navigate to `localhost:8001`on your browser.
+
+5. To stop and remove the running containers, run
+    ```bash
+    $ docker-compose down
+    ```
