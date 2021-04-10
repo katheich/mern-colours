@@ -25,6 +25,11 @@ function MenuBar(props) {
     setAnchorEl(null)
   }
 
+  function handleAccountModal() {
+    props.handleAccountOpen()
+    handleClose()
+  }
+
   function handleLogout() {
     Auth.logout()
     props.history.push('/')
@@ -52,7 +57,7 @@ function MenuBar(props) {
         {Auth.isAuthorized() && <MenuItem onClick={handleClose}>
           <Link to="/colours/new"><AddCircleOutlineOutlinedIcon /></Link>
         </MenuItem>}
-        {!Auth.isAuthorized() && <MenuItem onClick={props.handleAccountOpen}>
+        {!Auth.isAuthorized() && <MenuItem onClick={handleAccountModal}>
           <AccountCircleOutlinedIcon />
         </MenuItem>}
         {Auth.isAuthorized() && <div className="navbar-item">
