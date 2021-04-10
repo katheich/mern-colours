@@ -1,0 +1,22 @@
+#account-form {
+  display: flex;
+  flex-direction: column;
+
+  .MuiTextField-root, .MuiFormControl-root, .MuiButton-root {
+    width: 40vw;
+    margin: 2vh;
+  }
+
+  h2 {
+    margin-block-end: 0.2rem;
+  }
+
+  .link {
+    font-weight: bold;
+    cursor: pointer;
+    
+    &:hover {
+      color: blue;
+    }
+  }
+}

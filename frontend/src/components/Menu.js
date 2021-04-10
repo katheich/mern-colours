@@ -54,15 +54,15 @@ function MenuBar(props) {
         <MenuItem onClick={handleClose}>
           <Link to="/colours"><ListAltOutlinedIcon /></Link>
         </MenuItem>
-        {Auth.isAuthorized() && <MenuItem onClick={handleClose}>
+        <MenuItem onClick={handleClose}>
           <Link to="/colours/new"><AddCircleOutlineOutlinedIcon /></Link>
-        </MenuItem>}
+        </MenuItem>
         {!Auth.isAuthorized() && <MenuItem onClick={handleAccountModal}>
           <AccountCircleOutlinedIcon />
         </MenuItem>}
-        {Auth.isAuthorized() && <div className="navbar-item">
+        {Auth.isAuthorized() && <MenuItem>
           <a onClick={() => handleLogout()}><ExitToAppOutlinedIcon /></a>
-        </div>}
+        </MenuItem>}
       </Menu>
     </div>
   )

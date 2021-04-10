@@ -6,8 +6,10 @@ const dbPWD = 'password'
 
 const dbURI = `mongodb://${dbUser}:${dbPWD}@${dbURL}`
 
+const secret = 'Some secret that should be moved into an environmental variable'
 
 module.exports = {
   port,
-  dbURI
+  dbURI,
+  secret
 }
